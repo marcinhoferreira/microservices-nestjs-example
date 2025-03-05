@@ -38,5 +38,5 @@ RUN npx prisma migrate deploy
 EXPOSE 3000
 
 # Comando para iniciar a aplicação (substituído pelo docker-compose.yml)
-# Comando para aplicar migrações e iniciar a aplicação
+# Comando para iniciar a aplicação
 CMD ["npm", "run", "start:prod"]

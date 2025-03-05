@@ -1,5 +1,5 @@
 services:
-  raio-api:
+  microservices-api:
     build: .
     container_name: microservices-api
     ports:
