@@ -1,2 +1,3 @@
 # microservices-nestjs-example
-API example for microservices with nestjs
+
+Example API for microservices with nestjs
