@@ -2,14 +2,15 @@ import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import { MicroserviceOptions, Transport } from '@nestjs/microservices';
 
-async function bootstrap() {  
+async function bootstrap() {
+  const servicePort:number = parseInt(process.env.PORT || '4002');
   const app = await NestFactory.createMicroservice<MicroserviceOptions>(AppModule, {
     transport: Transport.TCP,
     options: {
-      port: 4002,
+      port: servicePort,
     }
   });  
   await app.listen();
-  console.log(`Products microservice is running on port 4002`);
+  console.log(`Products microservice is running on port ${servicePort}`);
 }
 bootstrap();
